@@ -5,15 +5,17 @@
   "scripts": {
     "start": "cross-env NODE_ENV=dev npm-run-all --parallel serve:app serve:functions",
     "serve:app": "vue-cli-service serve",
-    "serve:functions": "netlify-lambda serve functions/src",
+    "serve:functions": "netlify-lambda serve functions/src --config functions/config/webpack.functions.js",
     "build": "npm-run-all --parallel build:**",
     "build:app": "vue-cli-service build",
-    "build:functions": "netlify-lambda build functions/src",
+    "build:functions": "netlify-lambda build functions/src --config functions/config/webpack.functions.js",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "express": "^4.17.1",
+    "serverless-http": "^2.3.0",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3"
   },
