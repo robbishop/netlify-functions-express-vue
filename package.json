@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "serverless-http": "^2.3.0",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3"
